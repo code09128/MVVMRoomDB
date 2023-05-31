@@ -1,65 +1,6 @@
-# Android’s Room in Kotlin ft. MVVM Architecture and Coroutines
+references for this 
+https://medium.com/@umang.burman.micro/androids-room-in-kotlin-ft-mvvm-architecture-and-coroutines-4d4116e0f70f
 
-If you’re looking for an explanation on **Room** implementation on Android using Kotlin and one of it’s Coroutine feature with MVVM architecture, then this one is for you.
-
-Let’s see what I have in store for you.
-
-  1.  What is Room, Kotlin, MVVM, Coroutines?
-  2.  Advantages of Room over SQLite?
-  3.  Important Annotation in Room.
-  4.  Step-by-Step Simple Insert and Read Example
-  5.  Conclusion
-
-So let’s get started.
-
-## 1. What is Room, Kotlin, MVVM, Coroutines?
-
-**Answer:** Let's see what are the important concepts in ROOM and MVVM.
-
-**Room**
-**Room Database:** Database layer on top of SQLite database that takes care of mundane tasks that you used to handle with an SQLiteOpenHelper. Database holder that serves as an access point to the underlying SQLite database. The Room database uses the DAO to issue queries to the SQLite database.
-
-**Entity:** When working with Architecture Components, this is an annotated class that describes a database table.
-
-**SQLite database:** On the device, data is stored in an SQLite database. For simplicity, additional storage options, such as a web server, are omitted. The Room persistence library creates and maintains this database for you.
-
-**DAO:** Data access object. A mapping of SQL queries to functions. You used to have to define these painstakingly in your SQLiteOpenHelper class. When you use a DAO, you call the methods, and Room takes care of the rest.
-
-**Kotlin:** Kotlin is an open-source, statically-typed programming language that supports both object-oriented and functional programming. Kotlin provides similar syntax and concepts from other languages, including C#, Java, and Scala, among many others. Kotlin does not aim to be unique — instead, it draws inspiration from decades of language development. It exists in variants that target the JVM (Kotlin/JVM), JavaScript (Kotlin/JS), and native code (Kotlin/Native).
-
-**MVVM**
-**ViewModel:** Provides data to the UI. Acts as a communication center between the Repository and the UI. Hides where the data originates from the UI. ViewModel instances survive configuration changes.
-
-**LiveData:** A data holder class that can be observed. Always holds/caches latest version of data. Notifies its observers when the data has changed. LiveData is lifecycle aware. UI components just observe relevant data and don’t stop or resume observation. LiveData automatically manages all of this since it’s aware of the relevant lifecycle status changes while observing.
-
-**Repository:** A class that you create, for example using the WordRepository class. You use the Repository for managing multiple data sources.
-
-
-<img src="https://i.imgur.com/UsNsFfN.png" />
-
-
-**Coroutines**: Coroutines are a great new feature of Kotlin which allow you to write asynchronous code in a sequential fashion. … However, like RxJava, coroutines have a number of little subtleties that you end up learning for yourself during development time, or tricks that you pick up from others.
-
-
-## 2. Advantages of Room over SQLite?
-
-- In case of SQLite, There is no compile time verification of raw SQLite queries. But in Room there is SQL validation at compile time.
-
-- As your schema changes, you need to update the affected SQL queries manually. Room solves this problem.
-
-- You need to use lots of boilerplate code to convert between SQL queries and Java data objects. But, Room maps our database objects to Java Object without boilerplate code.
-
-- Room is built to work with LiveData and RxJava for data observation, while SQLite does not.
-
-
-## 3. Important Annotations in Room.
-
-
-<img src="https://i.imgur.com/KEXp8s2.png" />
-
-
-## 4. Implementation Step-by-Step?
-As said before, this example uses MVVM with Room using Kotlin and Coroutines. Let's dive into the steps of doing it.
 
 ### **Step1:** Add dependencies to your project:
 
