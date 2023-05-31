@@ -533,9 +533,3 @@ class MainActivity : AppCompatActivity() {
 ```
 
 For any clarifications please refer to the repository.
-
-## **Conclusion**
-
-Hopefully this guide introduced you to a lesser known yet useful form of Android application data storage called ROOM with Kotlin and MVVM.
-
-I hope it will help you too.
